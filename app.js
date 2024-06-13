@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://smilesdelivery.in"],
+  origin: ["http://localhost:3000", "https://zenoxin.vercel.app"],
   optionsSuccessStatus: 200,
 };
 
