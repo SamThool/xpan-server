@@ -46,7 +46,7 @@ export const getAllProducts = async (req, res) => {
   const products = await Product.find();
 
   if (!products) {
-    return res.status(404).json({
+    return res.status(405).json({
       success: false,
       message: "No Products Found",
     });
