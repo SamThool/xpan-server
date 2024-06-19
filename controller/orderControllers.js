@@ -50,7 +50,7 @@ export const createOrder = async (req, res) => {
         Order Details:
         --------------
         Name: ${name}
-        Contact: ${contact}
+        Contact: ${phone}
         Email: ${user.email}
         Pincode: ${pincode}
         State: ${state}
