@@ -6,7 +6,7 @@ import nodemailer from "nodemailer";
 const secretKey = "isdbfjabdsofufbaisond";
 
 export const createOrder = async (req, res) => {
-  const { name, contact, state, city, pincode, address, landmark, token } =
+  const { name, phone, state, city, pincode, address, landmark, token } =
     req.body;
 
   console.log(req.body);
@@ -18,7 +18,7 @@ export const createOrder = async (req, res) => {
 
   const order = new Order({
     name,
-    phone: contact,
+    phone: phone,
     email: user.email,
     pincode,
     cart: user.cart,
