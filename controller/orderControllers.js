@@ -9,6 +9,8 @@ export const createOrder = async (req, res) => {
   const { name, contact, state, city, pincode, address, landmark, token } =
     req.body;
 
+  console.log(req.body);
+
   const decodedToken = jwt.verify(token, secretKey);
   const uid = decodedToken.userId;
 
