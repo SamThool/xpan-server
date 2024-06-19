@@ -44,7 +44,19 @@ export const createOrder = async (req, res) => {
     from: "samythool102002@gmail.com",
     to: "zenoxindia.in@gmail.com",
     subject: `Order Recived from ${name}`,
-    text: JSON.stringify(order, null, 2),
+    text: `
+        Order Details:
+        --------------
+        Name: ${name}
+        Contact: ${contact}
+        Email: ${user.email}
+        Pincode: ${pincode}
+        State: ${state}
+        City: ${city}
+        Address: ${address}
+        Landmark: ${landmark}
+        Cart Items: ${JSON.stringify(user.cart, null, 2)}
+      `,
   };
 
   await transporter.sendMail(mailOptions);

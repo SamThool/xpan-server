@@ -5,7 +5,6 @@ export const createProduct = async (req, res) => {
     const { name, description, category, price, mrp, imageUrl, stock } =
       req.body;
 
-    // Validate required fields
     if (
       !name ||
       !category ||
